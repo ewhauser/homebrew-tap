@@ -1,19 +1,19 @@
 class ShuckCli < Formula
   desc "A fast shell script linter"
   homepage "https://github.com/ewhauser/shuck"
-  version "0.0.32"
+  version "0.0.33"
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/ewhauser/shuck/releases/download/v0.0.32/shuck-cli-aarch64-apple-darwin.tar.xz"
-    sha256 "502407a56ed384daa94f6415806bbb98574643c4ecb677f6b135b665d99c0c88"
+    url "https://github.com/ewhauser/shuck/releases/download/v0.0.33/shuck-cli-aarch64-apple-darwin.tar.xz"
+    sha256 "d99cd34279b56fee88f6a93e85dd405207e9f8021965a31d6f0bb343c07e11ba"
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/ewhauser/shuck/releases/download/v0.0.32/shuck-cli-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "e5adb8647bfb8d8ae44facdbb99e43d66f55b5dfef05b1c21e04997348fc7a8e"
+      url "https://github.com/ewhauser/shuck/releases/download/v0.0.33/shuck-cli-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "283c992cd5157e958043cf88bf40c0b2e7345527d17009487c02d26bb7966fce"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/ewhauser/shuck/releases/download/v0.0.32/shuck-cli-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "8c5092d8b5503e7d0c9c91f3be30e6b87f4ea25fc82106a509c6cbc7aff29a75"
+      url "https://github.com/ewhauser/shuck/releases/download/v0.0.33/shuck-cli-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "e192c8d54fe187ebe6076ba4d78e8346fb2376c3c11acb58d49e843202aa693d"
     end
   end
   license "MIT"
