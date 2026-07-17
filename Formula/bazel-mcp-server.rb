@@ -1,25 +1,25 @@
 class BazelMcpServer < Formula
   desc "A token-efficient MCP server for Bazel invocations"
   homepage "https://github.com/ewhauser/bazel-mcp"
-  version "0.5.1"
+  version "0.6.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/ewhauser/bazel-mcp/releases/download/v0.5.1/bazel-mcp-server-aarch64-apple-darwin.tar.xz"
-      sha256 "f183f46ac9c05de66c1dcd75725997c906e7865a6b6b12f953a14e32bd17dee7"
+      url "https://github.com/ewhauser/bazel-mcp/releases/download/v0.6.0/bazel-mcp-server-aarch64-apple-darwin.tar.xz"
+      sha256 "abdf6f3d41b16f99d9f18b03202c8173b7fcb369e8510267224be4cefd5f41f8"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/ewhauser/bazel-mcp/releases/download/v0.5.1/bazel-mcp-server-x86_64-apple-darwin.tar.xz"
-      sha256 "95f03471f382cf4bdf5802d641bd6a03ee97fbec468fa79a2eec12aeb110829b"
+      url "https://github.com/ewhauser/bazel-mcp/releases/download/v0.6.0/bazel-mcp-server-x86_64-apple-darwin.tar.xz"
+      sha256 "0692d7834fa1d94d494089b65fe451bd0b184ca83e4cb5ae539f8264684f5f7e"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/ewhauser/bazel-mcp/releases/download/v0.5.1/bazel-mcp-server-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "bb5dc7df89e000805bcaedc8bdc92856e5ae9cfe54200242599ee6b9c4d1c4ef"
+      url "https://github.com/ewhauser/bazel-mcp/releases/download/v0.6.0/bazel-mcp-server-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "da403aff5ce56003bc4127aa8f095dfb0edf939120fe546017a9ff6da2713502"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/ewhauser/bazel-mcp/releases/download/v0.5.1/bazel-mcp-server-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "f7838dc9acac8d302b3616081289069bb16a7dcdd9e98674061d411defc85ef1"
+      url "https://github.com/ewhauser/bazel-mcp/releases/download/v0.6.0/bazel-mcp-server-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "117720fe41b1f1ba356bee06ad5cd84f9b0bef1e9cd1ecf80c46b10700394eee"
     end
   end
   license "MIT"
