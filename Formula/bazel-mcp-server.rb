@@ -1,25 +1,25 @@
 class BazelMcpServer < Formula
   desc "A token-efficient MCP server for Bazel invocations"
   homepage "https://github.com/ewhauser/bazel-mcp"
-  version "0.3.0"
+  version "0.4.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/ewhauser/bazel-mcp/releases/download/v0.3.0/bazel-mcp-server-aarch64-apple-darwin.tar.xz"
-      sha256 "a60e3f73dcf361b78708d595f4c119463d0e3e8f1120dd3e38d98fb9089b9cf0"
+      url "https://github.com/ewhauser/bazel-mcp/releases/download/v0.4.0/bazel-mcp-server-aarch64-apple-darwin.tar.xz"
+      sha256 "ac387d39ed1acacbc250cdeec9410622f51c11c2aaf042fc7d1b177cc0d3787b"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/ewhauser/bazel-mcp/releases/download/v0.3.0/bazel-mcp-server-x86_64-apple-darwin.tar.xz"
-      sha256 "88597e7420273511e21cb55e2922c0fbd9915f9e9ccb0d1e64b237aaceeb7441"
+      url "https://github.com/ewhauser/bazel-mcp/releases/download/v0.4.0/bazel-mcp-server-x86_64-apple-darwin.tar.xz"
+      sha256 "99054454c6c7ba4949ee7e5e20943f3ae65cdd67c8b0939be9214486a35420d2"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/ewhauser/bazel-mcp/releases/download/v0.3.0/bazel-mcp-server-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "5f464ebc01bb1f8dc4857b80acc5d72a69108fd427f1b765f28b8b483d512e54"
+      url "https://github.com/ewhauser/bazel-mcp/releases/download/v0.4.0/bazel-mcp-server-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "c0885251955b328e29b91bba09ca2c2a23e878355306787a52399590fbd99305"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/ewhauser/bazel-mcp/releases/download/v0.3.0/bazel-mcp-server-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "25c0c27909d663908977f47ab4d44d8ce126ed1d447554a57127bebfce9372c5"
+      url "https://github.com/ewhauser/bazel-mcp/releases/download/v0.4.0/bazel-mcp-server-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "cf5291e4345c4a70f07d83cef364d95ed1aacde7ca764238177f7e440960ac13"
     end
   end
   license "MIT"
@@ -30,6 +30,7 @@ class BazelMcpServer < Formula
     "aarch64-unknown-linux-musl-dynamic": {},
     "aarch64-unknown-linux-musl-static":  {},
     "x86_64-apple-darwin":                {},
+    "x86_64-pc-windows-gnu":              {},
     "x86_64-unknown-linux-gnu":           {},
     "x86_64-unknown-linux-musl-dynamic":  {},
     "x86_64-unknown-linux-musl-static":   {},
