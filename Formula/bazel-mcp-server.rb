@@ -1,25 +1,25 @@
 class BazelMcpServer < Formula
   desc "A token-efficient MCP server for Bazel invocations"
   homepage "https://github.com/ewhauser/bazel-mcp"
-  version "0.7.0"
+  version "0.7.1"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/ewhauser/bazel-mcp/releases/download/v0.7.0/bazel-mcp-server-aarch64-apple-darwin.tar.xz"
-      sha256 "01d487eb8a8cf04fe17175f4db8a701977ee5ad27a9f6ab77d335bed03db4c22"
+      url "https://github.com/ewhauser/bazel-mcp/releases/download/v0.7.1/bazel-mcp-server-aarch64-apple-darwin.tar.xz"
+      sha256 "45339280d3212884c5f6f7d7c235496fed293e45ba16cbc71e6ff069ea97298e"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/ewhauser/bazel-mcp/releases/download/v0.7.0/bazel-mcp-server-x86_64-apple-darwin.tar.xz"
-      sha256 "dd0f002b359aff8997d482b1b5aec96c13f1cba0aefe54d6de819033bc49b5a4"
+      url "https://github.com/ewhauser/bazel-mcp/releases/download/v0.7.1/bazel-mcp-server-x86_64-apple-darwin.tar.xz"
+      sha256 "e0e783fa465744767e90584dd40d77823b18795f394406e89b170fdcdc71f255"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/ewhauser/bazel-mcp/releases/download/v0.7.0/bazel-mcp-server-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "44e36673a5d502f3ee314bdbe629380c148ff97478d23e2a1c5c3594dac9d386"
+      url "https://github.com/ewhauser/bazel-mcp/releases/download/v0.7.1/bazel-mcp-server-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "438df8821b8902877612b57894471bd8e59f3ab8e72ad37c4dc8802150868f59"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/ewhauser/bazel-mcp/releases/download/v0.7.0/bazel-mcp-server-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "af2b79525f7c766f799fd57c9f6c44fb9313e92b52c5ff8b699353ab8dbb61ce"
+      url "https://github.com/ewhauser/bazel-mcp/releases/download/v0.7.1/bazel-mcp-server-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "3008a23eb80b4888d34398d61c0e303d09980d5adf9217265ef6fa6f54fc087c"
     end
   end
   license "MIT"
@@ -52,10 +52,18 @@ class BazelMcpServer < Formula
   end
 
   def install
-    bin.install "bazel-mcp" if OS.mac? && Hardware::CPU.arm?
-    bin.install "bazel-mcp" if OS.mac? && Hardware::CPU.intel?
-    bin.install "bazel-mcp" if OS.linux? && Hardware::CPU.arm?
-    bin.install "bazel-mcp" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "bazel-mcp"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "bazel-mcp"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "bazel-mcp"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "bazel-mcp"
+    end
 
     install_binary_aliases!
 
